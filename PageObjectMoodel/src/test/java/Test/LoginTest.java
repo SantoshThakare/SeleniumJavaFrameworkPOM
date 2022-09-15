@@ -46,9 +46,25 @@ public class LoginTest {
 	public void afterSuite() {
 		Reporter.log("afterSuite", true);
 	}
-	@Test
+	@Test(priority = 1)
 	public void test() {
+		System.out.print("Test Started.....");
 		Reporter.log("test", true);
+
+	}
+
+	@Test(groups = {"module1"})
+	public void test2() {
+		
+		System.out.print("Test2");
+		Reporter.log("test 2", true);
+
+	}
+	@Test(invocationCount = 2)
+	public void test3() {
+		
+		System.out.print("Test3");
+		Reporter.log("test 3", true);
 
 	}
 
