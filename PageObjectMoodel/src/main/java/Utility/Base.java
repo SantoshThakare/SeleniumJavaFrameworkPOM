@@ -14,6 +14,7 @@ public class Base {
 	protected static WebElement element;
 	protected static FileInputStream file;
 	protected static Properties prop;
+	protected static Utility utility;
 	static {
 		
 		WebDriverManager.chromedriver().setup();
