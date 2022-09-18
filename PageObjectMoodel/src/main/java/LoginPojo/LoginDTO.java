@@ -26,7 +26,7 @@ public class LoginDTO {
 	}
 	
 	public void setPassword(String pd) {
-		password.sendKeys(pd);
+		password.sendKeys(pd); 
 	}
 
 	public void clicklogin() {

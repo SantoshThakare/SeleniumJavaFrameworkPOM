@@ -4,6 +4,8 @@ import java.io.File;
 import java.io.FileInputStream;
 import java.util.Properties;
 
+import org.apache.poi.xssf.usermodel.XSSFCell;
+import org.apache.poi.xssf.usermodel.XSSFRow;
 import org.apache.poi.xssf.usermodel.XSSFSheet;
 import org.apache.poi.xssf.usermodel.XSSFWorkbook;
 import org.openqa.selenium.WebDriver;
@@ -21,6 +23,8 @@ public class Base {
 	protected static Utility utility;
 	protected static XSSFWorkbook xWorkbook;
 	protected static XSSFSheet xSheet;
+	protected static XSSFCell xCell;
+	protected static XSSFRow xRow; 
 	protected static Object [][] data;
 
 	static {

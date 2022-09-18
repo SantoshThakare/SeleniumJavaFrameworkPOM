@@ -3,7 +3,8 @@
 <suite name="Suite">
   <test thread-count="5" name="TestChrome">
     <classes>
-      <class name="Test.Browser"/>
+      <class name="Test.Browser"></class>
+     
     </classes>
   </test> <!-- Test -->
 </suite> <!-- Suite -->
