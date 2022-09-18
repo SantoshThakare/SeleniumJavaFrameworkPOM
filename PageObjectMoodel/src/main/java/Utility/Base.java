@@ -11,6 +11,7 @@ import org.apache.poi.xssf.usermodel.XSSFWorkbook;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 
+import LoginPojo.LoginPage;
 import io.github.bonigarcia.wdm.WebDriverManager;
 
 public class Base {
@@ -26,7 +27,7 @@ public class Base {
 	protected static XSSFCell xCell;
 	protected static XSSFRow xRow; 
 	protected static Object [][] data;
-
+	protected static LoginPage loginP;
 	static {
 		
 		WebDriverManager.chromedriver().setup();
@@ -39,6 +40,14 @@ public class Base {
 			File.separator+ "resources"+
 			File.separator+ "repository"+
 			File.separator+ "LoginTestData.xlsx";
-
+	public Base() {
+		try {
+			file = new FileInputStream(".\\src\\main\\resources\\config.properties");
+			Properties prop = new Properties();
+			prop.load(file);
+		} catch (Exception e) {
+			e.printStackTrace();	
+		}
+	}
 			
 }

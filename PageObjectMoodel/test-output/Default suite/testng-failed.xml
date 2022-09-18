@@ -3,13 +3,13 @@
 <suite name="Failed suite [Default suite]" guice-stage="DEVELOPMENT">
   <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="Test.Browser">
+      <class name="Test.LoginPageTest">
         <methods>
-          <include name="LoginPage"/>
-          <include name="triggerDriver"/>
           <include name="terminateDriver"/>
+          <include name="triggerDriver"/>
+          <include name="validLoginPageWithXLSXDataTest"/>
         </methods>
-      </class> <!-- Test.Browser -->
+      </class> <!-- Test.LoginPageTest -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->

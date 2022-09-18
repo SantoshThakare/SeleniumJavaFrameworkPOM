@@ -16,7 +16,7 @@ public class Browser extends Base {
 	@BeforeClass
 	public void triggerDriver() {
 		try {
-			utility.initializerDriver();
+			utility.initializerDriver(prop.getProperty("browser"));
 
 		} catch (Exception e) {
 			e.printStackTrace();
@@ -25,12 +25,12 @@ public class Browser extends Base {
 	}
 
 
-//	@DataProvider(name = "LoginData")
-//	public Object[][] LoginData() {
-//		Object[][] data = utility.getLoginData();
-//		return data;
-//	}
-//	@DataProvider(name = "Data")
+	@DataProvider(name = "LoginData")
+	public Object[][] LoginData() {
+		Object[][] data = utility.getLoginData();
+		return data;
+	}
+	@DataProvider(name = "Data")
 	public Object[][] datatest(){
 		Object[][] data = new Object[2][2];
 		data[0][0] = "santoshthakare5000@gmail.com";

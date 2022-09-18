@@ -2,7 +2,6 @@ package Utility;
 
 import java.io.File;
 import java.io.FileInputStream;
-import java.io.FileNotFoundException;
 import java.io.IOException;
 import java.util.LinkedList;
 import java.util.List;
@@ -14,9 +13,9 @@ import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.opera.OperaDriver;
 
 
-public class Utility extends Base {
+ public class Utility extends Base {
 
-	public static void initializerDriver() {
+	public static void initializerDriver(String string) {
   
 		try {
 			file = new FileInputStream(".\\src\\main\\resources\\config.properties");
@@ -38,6 +37,7 @@ public class Utility extends Base {
 		}
 	}
 
+	@SuppressWarnings("resource")
 	public Object[][] getLoginData() {
 		try {
 			excelFile = new FileInputStream(FILE_PATH);
