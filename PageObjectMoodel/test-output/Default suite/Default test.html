@@ -55,11 +55,11 @@ function toggleAllBoxes() {
 <body>
 <h2 align='center'>Default test</h2><table border='1' align="center">
 <tr>
-<td>Tests passed/Failed/Skipped:</td><td>0/1/0</td>
+<td>Tests passed/Failed/Skipped:</td><td>0/0/1</td>
 </tr><tr>
-<td>Started on:</td><td>Fri Sep 16 20:29:12 IST 2022</td>
+<td>Started on:</td><td>Fri Sep 16 23:10:39 IST 2022</td>
 </tr>
-<tr><td>Total time:</td><td>0 seconds (64 ms)</td>
+<tr><td>Total time:</td><td>66 seconds (66952 ms)</td>
 </tr><tr>
 <td>Included groups:</td><td></td>
 </tr><tr>
@@ -67,22 +67,19 @@ function toggleAllBoxes() {
 </tr>
 </table><p/>
 <small><i>(Hover the method name to see the test class name)</i></small><p/>
-<table width='100%' border='1' class='invocation-failed'>
-<tr><td colspan='4' align='center'><b>FAILED TESTS</b></td></tr>
+<table width='100%' border='1' class='invocation-skipped'>
+<tr><td colspan='4' align='center'><b>SKIPPED TESTS</b></td></tr>
 <tr><td><b>Test method</b></td>
 <td width="30%"><b>Exception</b></td>
 <td width="10%"><b>Time (seconds)</b></td>
 <td><b>Instance</b></td>
 </tr>
 <tr>
-<td title='Test.LoginFromChrome.chromeLogin()'><b>chromeLogin</b><br>Test class: Test.LoginFromChrome</td>
-<td><div><pre>org.testng.TestNGException: 
-Parameter &apos;browser&apos; is required by @Test on method chromeLogin but has not been marked @Optional or defined
-in C:\Users\Shree\AppData\Local\Temp\testng-eclipse--1104470306\testng-customsuite.xml
-	at org.testng.internal.Parameters.createParams(Parameters.java:272)
-	at org.testng.internal.Parameters.createParametersForMethod(Parameters.java:360)
-	at org.testng.internal.Parameters.createParameters(Parameters.java:704)
-	at org.testng.internal.Parameters.handleParameters(Parameters.java:879)
+<td title='Test.Browser.LoginPage()'><b>LoginPage</b><br>Test class: Test.Browser</td>
+<td><div><pre>java.lang.RuntimeException: java.lang.NullPointerException: Cannot invoke &quot;Utility.Utility.getLoginData()&quot; because &quot;Test.Browser.utility&quot; is null
+	at org.testng.internal.MethodInvocationHelper.invokeMethodNoCheckedException(MethodInvocationHelper.java:51)
+	at org.testng.internal.MethodInvocationHelper.invokeDataProvider(MethodInvocationHelper.java:147)
+	at org.testng.internal.Parameters.handleParameters(Parameters.java:801)
 	at org.testng.internal.Parameters.handleParameters(Parameters.java:744)
 	at org.testng.internal.ParameterHandler.handleParameters(ParameterHandler.java:59)
 	at org.testng.internal.ParameterHandler.createParameters(ParameterHandler.java:38)
@@ -106,14 +103,21 @@ in C:\Users\Shree\AppData\Local\Temp\testng-eclipse--1104470306\testng-customsui
 	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
 	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
 	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
-</pre></div><a href='#' onClick='toggleBox("stack-trace140428850", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
-<div class='stack-trace' id='stack-trace140428850'><pre>org.testng.TestNGException: 
-Parameter &apos;browser&apos; is required by @Test on method chromeLogin but has not been marked @Optional or defined
-in C:\Users\Shree\AppData\Local\Temp\testng-eclipse--1104470306\testng-customsuite.xml
-	at org.testng.internal.Parameters.createParams(Parameters.java:272)
-	at org.testng.internal.Parameters.createParametersForMethod(Parameters.java:360)
-	at org.testng.internal.Parameters.createParameters(Parameters.java:704)
-	at org.testng.internal.Parameters.handleParameters(Parameters.java:879)
+Caused by: java.lang.NullPointerException: Cannot invoke &quot;Utility.Utility.getLoginData()&quot; because &quot;Test.Browser.utility&quot; is null
+	at Test.Browser.LoginData(Browser.java:27)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:568)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:134)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:78)
+	at org.testng.internal.MethodInvocationHelper.invokeMethodNoCheckedException(MethodInvocationHelper.java:47)
+	... 25 more
+</pre></div><a href='#' onClick='toggleBox("stack-trace1516759394", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace1516759394'><pre>java.lang.RuntimeException: java.lang.NullPointerException: Cannot invoke &quot;Utility.Utility.getLoginData()&quot; because &quot;Test.Browser.utility&quot; is null
+	at org.testng.internal.MethodInvocationHelper.invokeMethodNoCheckedException(MethodInvocationHelper.java:51)
+	at org.testng.internal.MethodInvocationHelper.invokeDataProvider(MethodInvocationHelper.java:147)
+	at org.testng.internal.Parameters.handleParameters(Parameters.java:801)
 	at org.testng.internal.Parameters.handleParameters(Parameters.java:744)
 	at org.testng.internal.ParameterHandler.handleParameters(ParameterHandler.java:59)
 	at org.testng.internal.ParameterHandler.createParameters(ParameterHandler.java:38)
@@ -137,9 +141,19 @@ in C:\Users\Shree\AppData\Local\Temp\testng-eclipse--1104470306\testng-customsui
 	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
 	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
 	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
+Caused by: java.lang.NullPointerException: Cannot invoke &quot;Utility.Utility.getLoginData()&quot; because &quot;Test.Browser.utility&quot; is null
+	at Test.Browser.LoginData(Browser.java:27)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:568)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:134)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:78)
+	at org.testng.internal.MethodInvocationHelper.invokeMethodNoCheckedException(MethodInvocationHelper.java:47)
+	... 25 more
 </pre></div></td>
 <td>0</td>
-<td>Test.LoginFromChrome@30c0ccff</td></tr>
+<td>Test.Browser@19b30c92</td></tr>
 </table><p>
 </body>
 </html>
